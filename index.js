@@ -1,6 +1,6 @@
 import "dotenv/config.js";
 import express from "express";
-import users from "./routes/users.js";
+import authors from "./routes/authors.js";
 import recipes from "./routes/recipes.js";
 import cors from "cors";
 
@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use("/users", users); //benutze den users endpunkt fuer alles was in /users passieren soll
+app.use("/authors", authors); //benutze den authors endpunkt fuer alles was in /users passieren soll
 app.use("/", recipes);
 app.use(cors())
 

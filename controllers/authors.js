@@ -1,6 +1,6 @@
 import pool from "../db/pg.js";
 
-export const getAllUsers = (req, res) => {
+export const getAllAuthors = (req, res) => {
   //datenbank abfragen select * from authors
   pool
     .query("SELECT * FROM authors")
@@ -8,7 +8,7 @@ export const getAllUsers = (req, res) => {
     .catch((err) => console.log(err));
 };
 
-export const getSingleUser = (req, res) => {
+export const getSingleAuthor = (req, res) => {
   //datenbank abfragen select * from authors where id=xy
   const id = req.params.id;
   pool.query("SELECT * from authors WHERE id=$1", [id]).then((data) => {
