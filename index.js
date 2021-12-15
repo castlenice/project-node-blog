@@ -7,10 +7,11 @@ import cors from "cors";
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(cors())
 app.use(express.json());
 app.use("/authors", authors); //benutze den authors endpunkt fuer alles was in /users passieren soll
 app.use("/", recipes);
-app.use(cors())
+
 
 app.get("/", (req, res) =>
   res.send(
