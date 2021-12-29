@@ -4,7 +4,7 @@ import {
   getSingleAuthor
 } from "../controllers/authors.js";
 
-const authors = express.Router();
+const authors = express.Router(); //router-methode kommt aus express package
 
 //um alle users zu bekommen
 authors.route("/").get(getAllAuthors);

@@ -11,7 +11,7 @@ export const getAllAuthors = (req, res) => {
 export const getSingleAuthor = (req, res) => {
   //datenbank abfragen select * from authors where id=xy
   const id = req.params.id;
-  pool.query("SELECT * from authors WHERE id=$1", [id]).then((data) => {
+  pool.query("SELECT * from authors WHERE id=$1", [id]).then((data) => { //$1 entspricht "id", $2 wuerde zb "name" entsprechen usw.
     // console.log(data);
     if (data.rowCount === 0) {
       res.status(404).send("User mit dieser ID existiert nicht");
@@ -20,5 +20,3 @@ export const getSingleAuthor = (req, res) => {
     }
   });
 };
-
-
