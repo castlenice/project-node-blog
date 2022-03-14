@@ -6,7 +6,7 @@ import { getRecipes } from "../controllers/recipes.js";
 const recipes = express.Router();
 
 
-recipes.route("/").get(getRecipes);
+recipes.route('/').get(getRecipes);
 
 
 export default recipes;

@@ -7,9 +7,9 @@ import {
 const authors = express.Router(); //router-methode kommt aus express package
 
 //um alle users zu bekommen
-authors.route("/").get(getAllAuthors);
+authors.route('/').get(getAllAuthors);
 
 //um nur einen user zu bekommen
-authors.route("/:id").get(getSingleAuthor);
+authors.route('/:id').get(getSingleAuthor);
 
 export default authors;
