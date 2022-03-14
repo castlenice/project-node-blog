@@ -1,4 +1,4 @@
-import pkg from 'pg';
+import pkg from 'pg'; //pg - postgres
 const { Pool } = pkg; //mit pool lassen sich mehrere datenbanken abfragen, im gegensatz zum client
 
 const connectionString = process.env.PG_CONNECTIONSTRING;  //zugriff auf diese speziellen daten
